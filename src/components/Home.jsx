@@ -1,10 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
+import Pokedex from './Pokedex'
 
 const Page = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding: 50px 200px;
 `
 
 const Title = styled.h1`
@@ -12,14 +14,11 @@ const Title = styled.h1`
   text-align: center;
 `
 
-const Pokedex = styled.div`
-
-`
-
 const Home = () => {
   return (
     <Page>
       <Title>Pokedex</Title>
+      <Pokedex />
     </Page>
   )
 }
