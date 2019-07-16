@@ -18,7 +18,7 @@ const Home = () => {
   return (
     <Page>
       <Title>Pokedex</Title>
-      <Pokedex />
+      <Pokedex pokemon='bulbasaur'/>
     </Page>
   )
 }
