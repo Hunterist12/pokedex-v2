@@ -10,26 +10,34 @@ const OuterEdge = styled.div`
   background-color: #ff2929;
   height: 600px;
   display: flex;
-`
+  flex-direction: row;
+  `
 
 const LeftSide = styled.div`
-
+  margin: 16px 8px 16px 16px;
+  flex: 1;
 `
 
 const RightSide = styled.div`
-
+  margin: 16px 16px 16px 8px;
+  flex: 1;
 `
 
 const Screen = styled.div`
-  background-color: #fff1b8
+  background-color: #fff1b8;
 
 `
 
-const Number = styled.h6`
+const NameRow = styled.div`
+  display: flex;
+  flex-direction: row;
+`
+
+const Number = styled.div`
   
 `
 
-const PokemonName = styled.h6`
+const PokemonName = styled.div`
 
 `
 
@@ -47,8 +55,10 @@ const Pokedex = ({ data: { loading, pokemon: { id, name, weight, height, types }
     <OuterEdge>
       <LeftSide>
         <Screen>
-          <Number>{id}</Number>
-          <PokemonName>{name}</PokemonName>
+          <NameRow>
+            <Number>{id}</Number>
+            <PokemonName>{name}</PokemonName>
+          </NameRow>
           <TypeRow>
             {types.map( type => <Type type={type} />)}
           </TypeRow>
