@@ -5,6 +5,7 @@ import gql from 'graphql-tag'
 import Type from './common/TypePill'
 import WeightRow from './WeightRow'
 import HeightRow from './HeightRow'
+import Sprite from './common/Sprite'
 
 const OuterEdge = styled.div`
   background-color: #ff2929;
@@ -59,6 +60,7 @@ const Pokedex = ({ data: { loading, pokemon: { id, name, weight, height, types }
             <Number>{id}</Number>
             <PokemonName>{name}</PokemonName>
           </NameRow>
+          <Sprite number={id} />
           <TypeRow>
             {types.map( type => <Type type={type} />)}
           </TypeRow>
